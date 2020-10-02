@@ -1,0 +1,19 @@
+/* image grid styles */
+.img-flex {
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-wrap {
+  width: 33.3%;
+  @media only screen and (max-width: 1000px) {
+    width: 50%;
+  }
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    width: 100%;
+  }
+}
