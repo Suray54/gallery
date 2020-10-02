@@ -1,10 +1,11 @@
 import React from "react";
 import useFirestore from "../hooks/useFirestore";
 import "./image.style.scss";
+
 const ImageGrid = () => {
   const { docs } = useFirestore("images");
   return (
-    <div className="img-flex">
+    <div className="img-flex" data-aos={"fade-up"}>
       {docs &&
         docs.map((doc) => (
           <div className="img-wrap" key={doc.id}>

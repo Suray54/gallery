@@ -9,9 +9,12 @@ const useFirestore = (collection) => {
     unsub.orderBy("createdAt", "desc").onSnapshot((snap) => {
       //console.log(snap);
       let documents = [];
-      snap.docs.map((doc) => {
+      // snap.docs.map((doc) => {
+      //documents.push({ ...doc.data(), id: doc.id });
+      //  return documents;
+      // });
+      snap.forEach((doc) => {
         documents.push({ ...doc.data(), id: doc.id });
-        return documents;
       });
       console.log(documents);
       setDocs(documents);

@@ -17,7 +17,7 @@ const UploadForm = () => {
   };
   return (
     <form>
-      <label>
+      <label data-aos={"fade-right"}>
         <input type="file" onChange={changeHandler} />
         <span>+</span>
       </label>
